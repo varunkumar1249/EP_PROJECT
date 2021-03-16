@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Online Student Mentoring System </title>
+  <script type="text/javascript">
+    function check_validation(){
+      var user = document.myform.name.value;
+      var pwd = document.myform.password.value;
+      if(user==null || user==""){
+        alert("Username can't be null . Please enter username");
+        return false;
+      }
+      else if(pwd.length<8){
+        if(pwd.length==0){
+          alert("Please enter password");
+          return false;
+        }
+        else{
+          alert("Password must be atleast 8 characters");
+          return false;
+        }
+      }
+    }
+  </script>
+  <style type="text/css">
+    body{
+      background-image: url('https://cdn.theculturetrip.com/wp-content/uploads/2015/05/book-809887_1280.jpg');
+      background-size: cover;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .loginbox{
+      width: 320px;
+      height: 420px;
+      background: brown;
+      color: white;
+      margin-top: 200px;
+      margin-left: 400px;
+      position: absolute;
+      box-sizing: border-box;
+      padding: 70px 30px;
+    }
+    .avatar{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: -10%;
+      left: 35%;
+    }
+    h1{
+      margin: 0;
+      padding: 0 0 15px;
+      text-align: center;
+      font-size: 32px;
+    }
+    .loginbox p{
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+    .input-field{
+      width: 250px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      height: 40px;
+      color: white;
+      outline: none;
+      font-size: 15px;
+    }
+    .submit{
+      width: 250px;
+      margin-bottom: 20px;
+      border: none;
+      outline: none;
+      height: 30px;
+      background: orange;
+      color: white;
+      font-size: 15px;
+    }
+    .loginbox a{
+      font-size: 15px;
+      line-height: 20px;
+      color: white;
+    }
+    .submit:hover {
+      background-color: blue;
+    }
+  </style>
+  
+</head>
+  <body>
+    <div class="loginbox">
+      <img src="avatar_img.png" class="avatar">
+      <h1> Login Here </h1>
+      <form name="myform" onsubmit="check_validation()" action="Login_servlet" method=post>
+        <p>Username</p>
+        <input type="text" class="input-field" name="name" placeholder="Username">
+        <p>Password</p>
+        <input type="password" class="input-field" name="password" placeholder="Password">
+        <input type="submit" class="submit" value="Login">
+        <a href="#">Forgotten password?</a><br>
+        <a href="signup.html">Don't have an Account</a>
+      </form>
+    </div>
+  </body>
+</html>

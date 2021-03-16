@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Skilling_Project1</display-name>
+  <welcome-file-list>
+    <welcome-file>Signup.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>     
+    <description></description>     
+    <description></description>     
+    <description></description>     
+    <display-name>Signup_servlet</display-name>
+    <servlet-name>Signup_servlet</servlet-name>
+    <servlet-class>p1.Signup_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Signup_servlet</servlet-name>
+    <url-pattern>/Signup_servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Login_servlet</display-name>
+    <servlet-name>Login_servlet</servlet-name>
+    <servlet-class>p1.Login_servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login_servlet</servlet-name>
+    <url-pattern>/Login_servlet</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,130 @@
+<html>
+
+
+<style type="text/css">
+    body{
+      background-image: url('https://cdn.theculturetrip.com/wp-content/uploads/2015/05/book-809887_1280.jpg');
+      background-size: cover;
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    .loginbox{
+      width: 350px;
+      height: 600px;
+      background: brown;
+      color: white;
+      margin-top: 100px;
+      margin-left: 400px;
+      position: absolute;
+      box-sizing: border-box;
+      padding: 70px 30px;
+    }
+    .avatar{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      top: -10%;
+      left: 35%;
+    }
+    h1{
+      margin: 0;
+      padding: 0 0 15px;
+      text-align: center;
+      font-size: 32px;
+    }
+    .loginbox p{
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+    .input-field{
+      width: 250px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 1px solid white;
+      background: transparent;
+      height: 40px;
+      color: white;
+      outline: none;
+      font-size: 15px;
+    }
+    .submit{
+      width: 250px;
+      margin-bottom: 20px;
+      border: none;
+      outline: none;
+      height: 30px;
+      background: orange;
+      color: white;
+      font-size: 15px;
+    }
+    .loginbox a{
+      font-size: 15px;
+      line-height: 40px;
+      color: white;
+    }
+    .submit:hover {
+      background-color: blue;
+    }
+  </style>
+
+
+<script type="text/javascript">
+  function check_validation()
+   {
+    
+        var mobile=document.myform.mobile;
+        var p1=document.myform.password1;
+        var p2=document.myform.password2;
+    if(mobile.value.length<10||mobile.value.length>10)
+    {
+      alert("please enter correct mobile number");
+      onfocus();
+      return false;
+    }
+    if(p1.value.length<8)
+    {
+      alert("your Password is weak.please enter password with minimum length of eight");
+      return false;
+    }
+    else if(p1.value!=p2.value)
+    {
+      alert("INVALID Password");
+      return false;
+    }
+
+   }
+</script>
+
+
+
+<body>
+  <div class="loginbox">
+  <form name="myform" onsubmit="check_validation()" action="Signup_servlet" method="post">
+    <h1>SIGN IN HERE</h1>
+    Name:<input type="text" class="input-field" name="name" required><br><br>
+    Gender:<input type="radio" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" required>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="other" required>
+                <label for="other">Other</label> <br><br>
+        Job:<input type="radio" name="job" value="student" required>
+                <label for="student">Student</label>
+                <input type="radio" name="job" value="Faculty" required>
+                <label for="">Faculty</label><br><br>
+    Birthday: <input type="date" name="birthday" ><br><br>
+        Email Id: <input type="email" name="emailid" required><br><br>
+        Phone Number:<input type="tel" name="mobile" required><br><br>
+        Create Password:<input type="Password" name="password1" ><br><br>
+        Conform Password:<input type="Password" name="password2" ><br><br>
+    <input type="submit" class="submit" value="SUBMIT">
+  </form>
+   </div>
+
+
+</body>
+</html>
